@@ -11,11 +11,13 @@ publisher_id integer primary key not null,
 first_name varchar(20) not null,
 last_name varchar(20) not null,
 email varchar(30) not null,
-password text not null
+password text not null,
+bundle_id text not null
 );
---we have create a scheme for ads too.
+
 create table apps(
-  bundle_id integer primary key not null,
+  app_id integer primary key not null,
+  bundle_id text not null,
   publisher_id integer not null,
   app_name varchar(30) not null,
   description varchar(50) not null,
